@@ -1,0 +1,137 @@
+:root {
+  --white: #fff;
+  --black: #000;
+  --gray: #7b7b7b;
+  --gray2: #44566c;
+  --global-btn-bg: #fff;
+  --box-bg: #fff;
+  --catkrill: #eef5fa;
+  --smooth-1: 0.3s ease-in;
+  --gradient: linear-gradient(97deg, #fa5252, #dd2476);
+  --gradient2: linear-gradient(97deg, #dd2476, #fa5252);
+  --bg-light: url(assets/bg-light.jpg);
+  --bg-dark: url(assets/bg-dark.jpg);
+  --box-shadow: 0 0px 5px rgba(0, 0, 0, 0.169);
+  --box-shadow-dark: 0 0px 5px rgba(255, 255, 255, 0);
+  --radius: 25px;
+  // font-size
+  --font1: 13px;
+  --font2: 20px;
+  --font3: 18px;
+  --font4: 26px;
+  --font5: 36px;
+  --font6: 16px;
+  --font7: 12px;
+  --font8: 22px;
+  --font9: 14px;
+  --font10: 24px;
+  --theme-btn-colo: #fff;
+
+  --bar-color1: #ff6464;
+  --bar-color2: #9272d4;
+  --bar-color3: #5185d4;
+  --bar-color4: #ca56f2;
+}
+
+.main {
+  position: relative;
+  // min-height: 100vh;
+}
+.bg {
+  position: fixed;
+  height: 100vh;
+  width: 100vw;
+  background-size: cover;
+  background-position: center;
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+}
+.bg-light {
+  background: var(--bg-light);
+  &::after {
+    background-color: rgba(120, 239, 221, 0.148);
+  }
+}
+.bg-dark {
+  background: var(--bg-dark);
+  &::after {
+    background-color: rgba(0, 0, 0, 0.148);
+  }
+}
+
+.container-box {
+  background-color: var(--box-bg);
+  border-radius: var(--radius);
+  margin: 4rem auto !important;
+  box-shadow: var(--box-shadow);
+  min-height: 100vh;
+}
+.inner-container {
+  width: 90%;
+  padding: 50px 0;
+  margin: 0 auto;
+  color: var(--black);
+}
+.intro-heading {
+  font-size: var(--font5);
+  font-weight: 500;
+  margin-bottom: 11px;
+}
+.copyright {
+  color: var(--gray2);
+  display: flex;
+  justify-content: center;
+  font-size: var(--font7);
+  padding: 1rem 0 2rem;
+  margin: 0 auto;
+}
+.global-heading {
+  position: relative;
+  font-size: var(--font5);
+  font-weight: 600;
+  margin-bottom: 1rem;
+  &::after {
+    position: absolute;
+    top: 50%;
+    margin-left: 20px;
+    transform: translateY(-50%);
+    content: "";
+    width: 80px;
+    height: 3px;
+    background: var(--gradient);
+  }
+}
+
+.dark-mode {
+  --black: rgb(214, 214, 214);
+  --global-btn-bg: #1d1d1d;
+  --theme-btn-colo: #000;
+  --box-bg: #111;
+  --catkrill: #111;
+  --box-shadow: 0 0px 5px rgba(255, 255, 255, 0.276);
+  --box-shadow-dark: 0 0px 5px rgba(255, 255, 255, 0.276);
+}
+
+@media (min-width: 768px) {
+  .global-heading::after {
+    width: 200px;
+  }
+}
+
+::-webkit-scrollbar-track {
+  background-color: var(--gray2);
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: var(--bar-color1);
+}
+
+::-webkit-scrollbar {
+  width: 3px;
+}
