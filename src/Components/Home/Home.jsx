@@ -5,8 +5,13 @@ import { FaFacebookF } from "react-icons/fa";
 import { FaLinkedinIn } from "react-icons/fa";
 import { FaTwitter } from "react-icons/fa6";
 import { FaInstagram } from "react-icons/fa";
+import { useAuth0 } from "@auth0/auth0-react";
+
+import { Link } from "react-router-dom";
 
 const Home = () => {
+  const { isAuthenticated } = useAuth0();
+
   return (
     <Main>
       <div className="container w-full">
@@ -23,30 +28,54 @@ const Home = () => {
           <div className="social flex gap-4">
             <a
               className="text-blue-600"
+              target="_blank"
               href="https://www.facebook.com/profile.php?id=100023261765267"
             >
               <FaFacebookF size={24} />
             </a>
             <a
               className="text-blue-800"
+              target="_blank"
               href="https://www.linkedin.com/in/pawan-joshi-8652a0268/"
             >
               <FaLinkedinIn size={24} />
             </a>
-            <a className="text-sky-400" href="https://twitter.com/UK02Pawan">
+            <a
+              className="text-sky-400"
+              target="_blank"
+              href="https://twitter.com/UK02Pawan"
+            >
               <FaTwitter size={24} />
             </a>
             <a
               className="text-pink-700"
+              target="_blank"
               href="https://www.instagram.com/itz_pawan.pj___/"
             >
               <FaInstagram size={24} />
             </a>
           </div>
-          <div className="cv mt-5 md:0">
-            <a href="./assets/cv.pdf" download="cv.pdf">
-              <GlobelButton text="Download" icon={<IoMdDownload size={24} />} />
-            </a>
+          <div className="cv mt-5 md:0 ">
+            {isAuthenticated ? (
+              <a href="./cv.pdf" download="cv.pdf">
+                <GlobelButton
+                  text="Download CV"
+                  icon={<IoMdDownload size={24} />}
+                />
+              </a>
+            ) : (
+              <a
+                title="Log In To Download"
+                className="disabled-btn "
+                to=""
+                onClick={(e) => e.preventDefault()}
+              >
+                <GlobelButton
+                  text="Downlaod CV"
+                  icon={<IoMdDownload size={24} />}
+                />
+              </a>
+            )}
           </div>
         </div>
       </div>
@@ -86,9 +115,8 @@ const Main = styled.div`
     }
   }
   .cv {
-    
     button {
-      font-size: var(--font4);
+      font-size: var(--font2);
       color: var(--white);
       transition: all var(--smooth-1);
       background: var(--gradient) !important;
@@ -97,6 +125,16 @@ const Main = styled.div`
 
       &:hover {
         background: var(--gradient2) !important;
+      }
+    }
+    a.disabled-btn {
+      button {
+        transition: all var(--smooth-1);
+        &:hover {
+          color: var(--gray2);
+          cursor: not-allowed;
+          background: var(--gradient4) !important;
+        }
       }
     }
   }

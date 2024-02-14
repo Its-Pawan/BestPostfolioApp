@@ -2,6 +2,7 @@
 import styled from "styled-components";
 import { CiLocationArrow1 } from "react-icons/ci";
 import ProgressBar from "../ProgressBar/ProgressBar";
+import Copyright from "../Copyright/Copyright";
 
 const Resume = () => {
   return (
@@ -156,9 +157,7 @@ const Resume = () => {
               </div>
             </div>
           </div>
-          <div className="copyright">
-            © {new Date().getFullYear()} All Rights Reserved by Pawan Joshi.
-          </div>
+          <Copyright />
         </div>
       </div>
     </Introduction>

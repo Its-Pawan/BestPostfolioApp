@@ -2,10 +2,14 @@ import React, { useState } from "react";
 import styled from "styled-components";
 import GlobelButton from "../GlobelButton/GlobelButton";
 import { IoIosSend } from "react-icons/io";
+import { useAuth0 } from "@auth0/auth0-react";
 
 import emailjs from "emailjs-com";
+import Copyright from "../Copyright/Copyright";
 
 const Contact = () => {
+  const { isAuthenticated } = useAuth0();
+
   const [inputValues, setInputValues] = useState({
     name: "",
     email: "",
@@ -59,8 +63,8 @@ const Contact = () => {
                   </div>
                   <div className="icon-info">
                     <h6>Phone :</h6>
-                    <p>+91 7465906545</p>
-                    <p>+91 8630590448</p>
+                    <p>+91 7465{isAuthenticated ? "906545" : "******"}</p>
+                    <p>+91 8630{isAuthenticated ? "590448" : "******"}</p>
                   </div>
                 </div>
 
@@ -70,8 +74,11 @@ const Contact = () => {
                   </div>
                   <div className="icon-info">
                     <h6>Email :</h6>
-                    <p>business.pawanjoshi</p>
-                    <p>myelyte1@gmail.com</p>
+                    <p>
+                      business{isAuthenticated ? ".pawanjoshi" : "***********"}
+                      <br />
+                      @gmail.com
+                    </p>
                   </div>
                 </div>
 
@@ -81,8 +88,8 @@ const Contact = () => {
                   </div>
                   <div className="icon-info">
                     <h6>Address :</h6>
-                    <p>Bageshwar</p>
-                    <p>Uttarakhand, India</p>
+                    <p>Ba{isAuthenticated ? "geshwar" : "*******"}</p>
+                    <p>Utta{isAuthenticated ? "rakhand" : "*******"}, India</p>
                   </div>
                 </div>
               </div>
@@ -160,9 +167,7 @@ const Contact = () => {
               </div>
             </div>
           </div>
-          <div className="copyright">
-            © {new Date().getFullYear()} All Rights Reserved by Pawan Joshi.
-          </div>
+          <Copyright />
         </div>
       </div>
     </Connect>
@@ -240,7 +245,6 @@ const Connect = styled.div`
           .label-click {
             top: -100%;
           }
-          
         }
         .form-box.form-box-sent {
           display: inline;

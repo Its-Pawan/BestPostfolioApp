@@ -9,6 +9,8 @@ import Navbar from "./Components/Navbar/Navbar";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import NotFound from "./Components/Notfount/NotFound";
 import Loader from "./Components/Loader/Loader";
+import Versions from "./Components/Versions/Versions";
+import Profile from "./Components/Profile/Profile";
 const App = () => {
   const [theme, setTheme] = useState(false);
 
@@ -18,24 +20,26 @@ const App = () => {
   useEffect(() => {
     setTimeout(() => {
       setIsLoading(false);
-    }, 2000);
+    }, 2100);
   }, []);
 
   return (
     <div className="App">
       {isLoading ? (
-        <Loader /> 
+        <Loader />
       ) : (
         <Router>
           <div className={`bg bg-light ${theme ? "bg-dark" : ""}`}></div>
           <div className={`main ${theme ? "dark-mode" : ""}`}>
-            <Navbar toggleTheme={toggleTheme} theme={theme}/>
+            <Navbar toggleTheme={toggleTheme} theme={theme} />
             <Routes>
               <Route path="/" element={<Home />} />
               <Route path="/about" element={<About />} />
               <Route path="/resume" element={<Resume />} />
               <Route path="/work" element={<Work />} />
               <Route path="/contact" element={<Contact />} />
+              <Route path="/update" element={<Versions />} />
+              <Route path="/profile" element={<Profile />} />
               <Route path="*" element={<NotFound />} />
             </Routes>
           </div>

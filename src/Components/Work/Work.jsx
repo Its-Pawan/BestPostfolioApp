@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import Copyright from "../Copyright/Copyright";
 import PortfolioBox from "../PortfolioBox/PortfolioBox";
 import WorkData from "./WorkData";
 
@@ -21,9 +22,7 @@ const Work = () => {
               ))}
             </div>
           </div>
-          <div className="copyright">
-            © {new Date().getFullYear()} All Rights Reserved by Pawan Joshi.
-          </div>
+          <Copyright />
         </div>
       </div>
     </Portfolio>

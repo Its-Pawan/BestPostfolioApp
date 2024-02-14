@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import { IoHomeOutline } from "react-icons/io5";
+import { Link } from "react-router-dom";
 
 const NotFound = () => {
   return (
@@ -7,7 +8,7 @@ const NotFound = () => {
       <div className="not-found-bg"></div>
       <p class="floating-text w-full justify-center flex items-center">
         <div className="w-auto nf-content ">
-          <a href="/" className="justify-center flex items-center">
+          <Link to="/" className="justify-center flex items-center">
             <span className="font-bold border-r-2 pr-3 text-sm lg:text-4xl">
               404
             </span>
@@ -17,7 +18,7 @@ const NotFound = () => {
                 Back to Home<IoHomeOutline className="inline ml-1 mt-[-3px]"/>
               </span>
             </span>
-          </a>
+          </Link>
         </div>
       </p>
     </FloatingTextContainer>

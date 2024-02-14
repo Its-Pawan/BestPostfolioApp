@@ -1,18 +1,25 @@
 import React from "react";
+import { useAuth0 } from "@auth0/auth0-react";
+import GlobelButton from "../GlobelButton/GlobelButton";
 import styled from "styled-components";
 
-const GlobelButton = ({ text, icon, type }) => {
+const LoginButton = ({ text, icon }) => {
+  const { loginWithRedirect } = useAuth0();
+
   return (
-    <UniButton type={type} className="flex items-center  gap-2">
+    <Login
+      onClick={() => loginWithRedirect()}
+      className="flex items-center gap-2"
+    >
       {icon}
       {text}
-    </UniButton>
+    </Login>
   );
 };
 
-export default GlobelButton;
+export default LoginButton;
 
-const UniButton = styled.button`
+const Login = styled.button`
   background: var(--global-btn-bg);
   color: var(--gray);
   border-radius: 8px;

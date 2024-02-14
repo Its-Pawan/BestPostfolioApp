@@ -57,7 +57,7 @@ export default function ProgressBar({
       if (progress < skillBarLevel) {
         setProgress(progress + 1);
       }
-    }, 2);
+    }, 50);
 
     return () => clearInterval(interval);
   }, [progress]);

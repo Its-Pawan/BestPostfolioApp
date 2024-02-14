@@ -9,8 +9,12 @@ import { IoBriefcaseOutline } from "react-icons/io5";
 import { RiContactsBookLine } from "react-icons/ri";
 import { RiMenu3Fill } from "react-icons/ri";
 import { MdOutlineWbSunny } from "react-icons/md";
-
+import { IoPersonCircleOutline } from "react-icons/io5";
+import { IoLogInOutline } from "react-icons/io5";
 import { NavLink } from "react-router-dom";
+import LoginButton from "../Login/LoginButton";
+
+import { useAuth0 } from "@auth0/auth0-react";
 
 const Navbar = ({ toggleTheme, theme }) => {
   const [menu, setMenu] = useState(false);
@@ -22,6 +26,7 @@ const Navbar = ({ toggleTheme, theme }) => {
     setMenu(false);
   };
 
+  const { isAuthenticated } = useAuth0();
   return (
     <Nav>
       <div className="container ">
@@ -104,6 +109,31 @@ const Navbar = ({ toggleTheme, theme }) => {
                     />
                   </NavLink>
                 </li>
+
+                {isAuthenticated ? (
+                  <li
+                    className={`menu-item ${
+                      activeItem === "profile" ? "active" : ""
+                    } `}
+                    onClick={() => handleItemClick("profile")}
+                  >
+                    <NavLink to="/profile">
+                      <GlobelButton
+                        text="Profile"
+                        icon={<IoPersonCircleOutline size={20} />}
+                      />
+                    </NavLink>
+                  </li>
+                ) : (
+                  <li className={`menu-item`}>
+                    <NavLink>
+                      <LoginButton
+                        text="Login"
+                        icon={<IoLogInOutline size={20} />}
+                      />
+                    </NavLink>
+                  </li>
+                )}
               </ul>
             </div>
 
@@ -183,10 +213,9 @@ const Nav = styled.nav`
   .menu-icon-bg {
     background: #1b74e4 !important;
   }
-  .theme-btn{
+  .theme-btn {
     background-color: var(--theme-btn-colo);
     box-shadow: none;
-    
   }
 
   @media (min-width: 768px) {

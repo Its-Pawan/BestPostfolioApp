@@ -5,8 +5,10 @@ import { IoLocationOutline } from "react-icons/io5";
 import { FaRegCalendarAlt } from "react-icons/fa";
 import Skills from "../Skills/Skills";
 import SkillsData from "./SkillsData";
-
+import Copyright from "../Copyright/Copyright";
+import { useAuth0 } from "@auth0/auth0-react";
 const About = () => {
+  const { isAuthenticated } = useAuth0();
   return (
     <AboutMe>
       <div className=" container">
@@ -17,7 +19,10 @@ const About = () => {
               <div className="about">
                 <div className="flex flex-col mt-8  lg:flex-row md:gap-8 ">
                   <div className="left  ">
-                    <img src="https://raw.githubusercontent.com/Its-Pawan/PortfolioImages/main/parson2.png" alt="parson2" />
+                    <img
+                      src="https://raw.githubusercontent.com/Its-Pawan/PortfolioImages/main/parson2.png"
+                      alt="parson2"
+                    />
                   </div>
                   <div className="right ">
                     <div className="upper">
@@ -44,7 +49,9 @@ const About = () => {
                           </div>
                           <div className="intro">
                             <p>Phone</p>
-                            <h6>+91 7465906545</h6>
+                            <h6>
+                              +91 7465{isAuthenticated ? "906545" : "******"}
+                            </h6>
                           </div>
                         </div>
                         <div className="info-box">
@@ -53,7 +60,11 @@ const About = () => {
                           </div>
                           <div className="intro">
                             <p>Email</p>
-                            <h6>business.pawanjoshi@gmail.com</h6>
+                            <h6>
+                              business
+                              {isAuthenticated ? ".pawanjoshi" : "***********"}
+                              @gmail.com
+                            </h6>
                           </div>
                         </div>
                         <div className="info-box">
@@ -62,7 +73,10 @@ const About = () => {
                           </div>
                           <div className="intro">
                             <p>Location</p>
-                            <h6>Uttarakhand, India</h6>
+                            <h6>
+                              Utta{isAuthenticated ? "rakhand" : "*******"},
+                              India
+                            </h6>
                           </div>
                         </div>
                         <div className="info-box">
@@ -71,7 +85,11 @@ const About = () => {
                           </div>
                           <div className="intro">
                             <p>Birthday</p>
-                            <h6>Jan 06, 2002</h6>
+                            <h6>
+                              {isAuthenticated
+                                ? "Jan 06, 2002"
+                                : "*** ** ****"}
+                            </h6>
                           </div>
                         </div>
                       </div>
@@ -95,9 +113,7 @@ const About = () => {
             </div>
           </div>
 
-          <div className="copyright">
-            © {new Date().getFullYear()} All Rights Reserved by Pawan Joshi.
-          </div>
+          <Copyright />
         </div>
       </div>
     </AboutMe>
@@ -108,7 +124,6 @@ export default About;
 
 const AboutMe = styled.div`
   .inner-container {
-    
     .about {
       .left {
         width: 100%;
@@ -195,7 +210,6 @@ const AboutMe = styled.div`
     }
   }
   @media (min-width: 868px) {
-   
     .left {
       width: 75% !important;
       height: 400px !important;
