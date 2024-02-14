@@ -25,8 +25,8 @@ const Profile = () => {
                 alt={user.name}
                 className="w-28 rounded-full mb-2"
               />
-              <h2>
-                Hello, <span>{user.name}</span>{" "}
+              <h2 >
+                Hello, <span className="">{user.name}</span>{" "}
               </h2>
               <h3>Welcome to My Portfolio</h3>
               <p className="w-[90%] md:w-[60%] text-center pt-4">
@@ -72,8 +72,8 @@ const Info = styled.div`
       box-shadow: var(--box-shadow);
     }
     h2 {
+      text-align: center;
       font-weight: 400;
-      font-size: var(--font8);
       color: var(--black);
       letter-spacing: 0.05em;
       padding-bottom: 5px;

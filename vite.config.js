@@ -4,17 +4,8 @@ import react from '@vitejs/plugin-react';
 export default defineConfig({
   plugins: [react()],
   server: {
-    watch:{
-      usePolling: true
-    },
     fs: {
       strict: false
     },
-    proxy: {
-      '/': {
-        target: 'http://localhost:3000', 
-        rewrite: (path) => '/index.html'
-      }
-    }
   }
 });
