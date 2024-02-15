@@ -56,26 +56,12 @@ const Home = () => {
             </a>
           </div>
           <div className="cv mt-5 md:0 ">
-            {isAuthenticated ? (
-              <a href="./cv.pdf" download="cv.pdf">
+          <a href="./cv.pdf" download="cv.pdf" title="Click to download resume">
                 <GlobelButton
                   text="Download CV"
                   icon={<IoMdDownload size={24} />}
                 />
               </a>
-            ) : (
-              <a
-                title="Log In To Download"
-                className="disabled-btn "
-                to=""
-                onClick={(e) => e.preventDefault()}
-              >
-                <GlobelButton
-                  text="Downlaod CV"
-                  icon={<IoMdDownload size={24} />}
-                />
-              </a>
-            )}
           </div>
         </div>
       </div>
@@ -125,16 +111,6 @@ const Main = styled.div`
 
       &:hover {
         background: var(--gradient2) !important;
-      }
-    }
-    a.disabled-btn {
-      button {
-        transition: all var(--smooth-1);
-        &:hover {
-          color: var(--gray2);
-          cursor: not-allowed;
-          background: var(--gradient4) !important;
-        }
       }
     }
   }

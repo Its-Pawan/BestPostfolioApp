@@ -57,8 +57,8 @@ const Versions = () => {
                   </p>
                 </li>
                 <li>
-                  <h5>V1.3</h5>
-                  <p>Comming Soon</p>
+                  <h5>V1.2.1</h5>
+                  <p>Fixed some known bugs and issues.</p>
                 </li>
               </ul>
             </div>
