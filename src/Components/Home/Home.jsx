@@ -56,12 +56,16 @@ const Home = () => {
             </a>
           </div>
           <div className="cv mt-5 md:0 ">
-          <a href="./cv.pdf" download="cv.pdf" title="Click to download resume">
-                <GlobelButton
-                  text="Download CV"
-                  icon={<IoMdDownload size={24} />}
-                />
-              </a>
+            <a
+              href="./cv.pdf"
+              download="cv.pdf"
+              title="Click to download resume"
+            >
+              <GlobelButton
+                text="Download CV"
+                icon={<IoMdDownload size={24} />}
+              />
+            </a>
           </div>
         </div>
       </div>
@@ -111,6 +115,9 @@ const Main = styled.div`
 
       &:hover {
         background: var(--gradient2) !important;
+        -webkit-box-shadow: 1px 5px 90px -1px rgba(221, 36, 118, 1);
+        -moz-box-shadow: 1px 5px 90px -1px rgba(221, 36, 118, 1);
+        box-shadow: 1px 5px 90px -1px rgba(221, 36, 118, 1);
       }
     }
   }
