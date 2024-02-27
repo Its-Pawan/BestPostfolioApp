@@ -35,8 +35,15 @@
     padding: 10px 20px;
     background: #39ac31;
     margin: 20px 0;
+    border-radius: 5px;
     display: inline-block;
+    transition: all .3s ease;
 }
+.link_404:hover{
+    transform: scale(1.08);
+    border-radius: 10px;
+}
+
 
 .contant_box_404 {
     margin-top: -50px;
