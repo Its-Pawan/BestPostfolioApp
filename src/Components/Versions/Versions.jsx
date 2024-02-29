@@ -60,6 +60,13 @@ const Versions = () => {
                   <h5>V1.2.1</h5>
                   <p>Fixed some known bugs and issues.</p>
                 </li>
+                <li>
+                  <h5>V1.2.2</h5>
+                  <p>
+                    Changed some UI designs, like new look of 'Work' section,
+                    updated contact information.
+                  </p>
+                </li>
               </ul>
             </div>
           </div>

@@ -10,7 +10,7 @@ const Copyright = () => {
         to="/update"
         className="transition-all text-[var(--black)] duration-200 ease-in font-extrabold pl-1 hover:text-blue-500"
       >
-        V<span className="text-[10px]  font-bold ">1.2.1</span>
+        V<span className="text-[10px]  font-bold ">1.2.2</span>
       </Link>
     </div>
   );
