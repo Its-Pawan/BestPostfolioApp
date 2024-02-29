@@ -28,10 +28,11 @@ const About = () => {
                     <div className="upper">
                       <h4 className="intro-heading">Who Am I?</h4>
                       <p>
-                        I'm Creative Director and UI/UX Designer from Sydney,
-                        Australia, working in web development and print media. I
-                        enjoy turning complex problems into simple, beautiful
-                        and intuitive designs.
+                        Hi, I am Pawan and I am a front-end web developer. My journey in technology shapes my
+                        identity, blending creativity with code. I craft digital
+                        experiences, intertwining aesthetics and functionality,
+                        constantly evolving in the dynamic realm of web
+                        development.
                       </p>
                       <br />
                       <p>
@@ -86,9 +87,7 @@ const About = () => {
                           <div className="intro">
                             <p>Birthday</p>
                             <h6>
-                              {isAuthenticated
-                                ? "Jan 06, 2002"
-                                : "*** ** ****"}
+                              {isAuthenticated ? "Jan 06, 2002" : "*** ** ****"}
                             </h6>
                           </div>
                         </div>

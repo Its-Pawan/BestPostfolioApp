@@ -31,7 +31,7 @@ const WorkData = [
         id: 5,
         img: "./assets/images/portfolio5.jpg",
         tech: "ReactJS + TailwindCss",
-        title: "Construction Management Service",
+        title: "Management Service",
         url: "https://its-pawan.github.io/DPR/"
     },
 ]

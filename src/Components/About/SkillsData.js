@@ -3,37 +3,37 @@ const SkillsData = [
         id: 1,
         icon: "./assets/icons/design.svg",
         title: "Ui/Ux Design",
-        desc: "Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam euismod tincidunt volutpat."
+        desc: "I value simple content structure, clean design patterns, and thoughtful interactions."
     },
     {
         id: 2,
         icon: "./assets/icons/app-development.svg",
-        title: "App Development",
-        desc: "Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam euismod tincidunt volutpat."
+        title: "Mentor",
+        desc: "I genuinely care about people, and enjoy helping them work on their craft."
     },
     {
         id: 3,
         icon: "./assets/icons/photograph.svg",
         title: "Photography",
-        desc: "Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam euismod tincidunt volutpat."
+        desc: "Photography transcends mere images; it's a passion that captures moments, emotions, and stories."
     },
     {
         id: 4,
         icon: "./assets/icons/webdev.svg",
         title: "Web Development",
-        desc: "Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam euismod tincidunt volutpat."
+        desc: "I like to code things from scratch, and enjoy bringing ideas to life in the browser.."
     },
     {
         id: 5,
         icon: "./assets/icons/management.svg",
         title: "Management",
-        desc: "Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam euismod tincidunt volutpat."
+        desc: "planning, organizing, directing, and controlling processes, fostering optimal performance and growth."
     },
     {
         id: 6,
         icon: "./assets/icons/webdev.svg",
         title: "Web Development",
-        desc: "Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam euismod tincidunt volutpat."
+        desc: "I like to code things from scratch, and enjoy bringing ideas to life in the browser.."
     },
 ]
 

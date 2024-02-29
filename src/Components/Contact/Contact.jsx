@@ -63,8 +63,8 @@ const Contact = () => {
                   </div>
                   <div className="icon-info">
                     <h6>Phone :</h6>
+                    <p>+91 9412{isAuthenticated ? "949745" : "******"}</p>
                     <p>+91 7465{isAuthenticated ? "906545" : "******"}</p>
-                    <p>+91 8630{isAuthenticated ? "590448" : "******"}</p>
                   </div>
                 </div>
 
@@ -88,7 +88,7 @@ const Contact = () => {
                   </div>
                   <div className="icon-info">
                     <h6>Address :</h6>
-                    <p>Ba{isAuthenticated ? "geshwar" : "*******"}</p>
+                    <p>Hal{isAuthenticated ? "dwani" : "*******"}</p>
                     <p>Utta{isAuthenticated ? "rakhand" : "*******"}, India</p>
                   </div>
                 </div>

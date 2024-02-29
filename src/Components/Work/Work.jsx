@@ -30,5 +30,4 @@ const Work = () => {
 };
 
 export default Work;
-const Portfolio = styled.div`
-`;
+const Portfolio = styled.div``;
