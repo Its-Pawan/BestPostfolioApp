@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import GlobelButton from "../GlobelButton/GlobelButton";
 import { IoMdDownload } from "react-icons/io";
-import { FaFacebookF } from "react-icons/fa";
+import { FaGithub  } from "react-icons/fa";
 import { FaLinkedinIn } from "react-icons/fa";
 import { FaTwitter } from "react-icons/fa6";
 import { FaInstagram } from "react-icons/fa";
@@ -27,11 +27,11 @@ const Home = () => {
           </div>
           <div className="social flex gap-4">
             <a
-              className="text-blue-600"
+              className="text-gray-700"
               target="_blank"
-              href="https://www.facebook.com/profile.php?id=100023261765267"
+              href="https://github.com/Its-Pawan"
             >
-              <FaFacebookF size={24} />
+              <FaGithub  size={24} />
             </a>
             <a
               className="text-blue-800"
