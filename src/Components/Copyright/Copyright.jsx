@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 const Copyright = () => {
   return (
     <div className="copyright">
-      © {new Date().getFullYear()} All Rights Reserved.{" "}
+      © {new Date().getFullYear()} Pawan Joshi, All Rights Reserved.{" "}
       <Link
         to="/update"
         className="transition-all text-[var(--black)] duration-200 ease-in font-extrabold pl-1 hover:text-blue-500"

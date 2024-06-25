@@ -11,6 +11,8 @@ import NotFound from "./Components/Notfount/NotFound";
 import Loader from "./Components/Loader/Loader";
 import Versions from "./Components/Versions/Versions";
 import Profile from "./Components/Profile/Profile";
+import BlogsPage from "./Components/Blog/BlogsPage";
+import BlogPost from "./Components/Blog/Blog/BlogPost";
 const App = () => {
   const [theme, setTheme] = useState(false);
 
@@ -40,6 +42,8 @@ const App = () => {
               <Route path="/contact" element={<Contact />} />
               <Route path="/update" element={<Versions />} />
               <Route path="/profile" element={<Profile />} />
+              <Route path="/blogs" element={<BlogsPage />} />
+              <Route path="/blogs/:slug" element={<BlogPost />} />
               <Route path="*" element={<NotFound />} />
             </Routes>
           </div>

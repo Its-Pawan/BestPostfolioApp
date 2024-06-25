@@ -109,8 +109,21 @@ const Navbar = ({ toggleTheme, theme }) => {
                     />
                   </NavLink>
                 </li>
+                <li
+                  className={`menu-item ${
+                    activeItem === "blogs" ? "active" : ""
+                  } `}
+                  onClick={() => handleItemClick("blogs")}
+                >
+                  <NavLink to="/blogs">
+                    <GlobelButton
+                      text="Blogs"
+                      icon={<RiContactsBookLine size={20} />}
+                    />
+                  </NavLink>
+                </li>
 
-                {isAuthenticated ? (
+                  {isAuthenticated ? (
                   <li
                     className={`menu-item ${
                       activeItem === "profile" ? "active" : ""
@@ -133,7 +146,7 @@ const Navbar = ({ toggleTheme, theme }) => {
                       />
                     </NavLink>
                   </li>
-                )}
+                )} 
               </ul>
             </div>
 

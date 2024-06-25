@@ -8,7 +8,7 @@ const Versions = () => {
         <div className="container-box  ">
           <div className="content flex gap-1 p-8">
             <div className="blog-content  ">
-              <ul className="flex flex-col gap-4 ">
+              <ul className="flex flex-col gap-4 flex-col-reverse">
                 <li>
                   <h5>V1.0</h5>
                   <p>
@@ -65,6 +65,12 @@ const Versions = () => {
                   <p>
                     Changed some UI designs, like new look of 'Work' section,
                     updated contact information.
+                  </p>
+                </li>
+                <li>
+                  <h5>V1.3</h5>
+                  <p>
+                  <b> Added Blogs section,</b> user can now read latest tech blogs with my portfolio web application.
                   </p>
                 </li>
               </ul>
