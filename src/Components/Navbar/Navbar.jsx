@@ -11,6 +11,7 @@ import { RiMenu3Fill } from "react-icons/ri";
 import { MdOutlineWbSunny } from "react-icons/md";
 import { IoPersonCircleOutline } from "react-icons/io5";
 import { IoLogInOutline } from "react-icons/io5";
+import { FaUserPen } from "react-icons/fa6";
 import { NavLink } from "react-router-dom";
 import LoginButton from "../Login/LoginButton";
 
@@ -71,7 +72,7 @@ const Navbar = ({ toggleTheme, theme }) => {
                   </NavLink>
                 </li>
                 <li
-                  className={`menu-item ${
+                  className={`menu-item hidden md:block ${
                     activeItem === "resume" ? "active" : ""
                   } `}
                   onClick={() => handleItemClick("resume")}
@@ -118,12 +119,12 @@ const Navbar = ({ toggleTheme, theme }) => {
                   <NavLink to="/blogs">
                     <GlobelButton
                       text="Blogs"
-                      icon={<RiContactsBookLine size={20} />}
+                      icon={<FaUserPen  size={20} />}
                     />
                   </NavLink>
                 </li>
 
-                  {isAuthenticated ? (
+                {isAuthenticated ? (
                   <li
                     className={`menu-item ${
                       activeItem === "profile" ? "active" : ""
@@ -146,7 +147,7 @@ const Navbar = ({ toggleTheme, theme }) => {
                       />
                     </NavLink>
                   </li>
-                )} 
+                )}
               </ul>
             </div>
 

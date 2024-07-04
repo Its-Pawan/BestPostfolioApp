@@ -3,26 +3,28 @@ import styled from "styled-components";
 import GlobelButton from "../../GlobelButton/GlobelButton";
 import { MdOutlineTouchApp } from "react-icons/md";
 
-import { Link } from "react-router-dom";
-import { split } from "postcss/lib/list";
+import { Link } from "react-router-dom"; 
 
-const BlogsCard = ({ Image, Title, Desc, PubliseDate, redirectTo,index }) => {
+const BlogsCard = ({ Image, Title, Desc, PubliseDate,index }) => {
+
+
+  
   return (
     <SingleBlogCard>
       <div className="card-content flex flex-col md:flex-row  md:gap-8 ">
         <div className="thumbnail-img">
-          <img src={Image} alt={Title} />
+        {Image ? <img src={Image} alt={Title}  /> : <p>No image available</p>}
         </div>
         <div className="thumbnail-content flex flex-col justify-between">
           <div>
             <h3 className="title">
-              <Link  to={`/blogs/${index}`}> {Title}</Link>
+              <Link  to={`/blogs/${Title}`}> {Title}</Link>
             </h3>
             <h5 className="publise-date mb-5">{new Date(PubliseDate).toLocaleDateString()}</h5>
             <p className="desc md:pr-6">{Desc}</p>
           </div>
           <div>
-            <Link className="inline-block"  to={`/blogs/${index}`}>
+            <Link className="inline-block"  to={`/blogs/${Title}`}>
               <GlobelButton
                 text="Read More"
                 icon={<MdOutlineTouchApp size={24} type="button" />}
@@ -43,16 +45,20 @@ const SingleBlogCard = styled.div`
     padding: 15px;
   }
   .thumbnail-img {
-    width: 100%;
+    /* width: 500px; */
+    width: 80%;
+    aspect-ratio: 16/9;
     border-radius: var(--radius);
     overflow: hidden;
     img{
     border-radius: var(--radius);
-    height: 100%;
-    object-fit: cover; 
+    /* height: 100%; */
+    object-fit: contain; 
+    /* height: 200px; */
     }
   }
   .thumbnail-content {
+    width: 50%;
     .title {
       font-weight: 600;
       font-size: var(--font4);
@@ -89,6 +95,17 @@ const SingleBlogCard = styled.div`
       justify-content: start;
       &:hover {
         border-color: transparent;
+      }
+    }
+  }
+  @media (max-width: 768px)  {
+    .thumbnail-img {
+      width: 100%;
+    }
+    .thumbnail-content {
+      width: 100%;
+      .title{
+        margin-top: 10px;
       }
     }
   }

@@ -68,9 +68,30 @@ const Versions = () => {
                   </p>
                 </li>
                 <li>
-                  <h5>V1.3</h5>
+                  <h5>V2.0.0</h5>
                   <p>
-                  <b> Added Blogs section,</b> user can now read latest tech blogs with my portfolio web application.
+                    <ul>
+                      <li>
+                        <b>Upgraded to MERN Stack: </b> Transitioned from
+                        React-only to MERN (MongoDB, Express, React, Node.js)
+                        for enhanced dynamic content capabilities.
+                      </li>
+                      <li>
+                        <b>Dynamic Blog Integration: </b> Introduced dynamic blog
+                        functionality, allowing seamless creation, editing, and
+                        deletion of blog posts.
+                      </li>
+                      <li>
+                        <b>Improved UI/UX: </b> Enhanced user interface with
+                        redesigned 'Work' section and updated contact
+                        information for a more intuitive experience.
+                      </li>
+                      <li>
+                        <b>Bug Fixes and Enhancements: </b> Addressed known
+                        issues and implemented improvements to ensure smoother
+                        performance and functionality.
+                      </li>
+                    </ul>
                   </p>
                 </li>
               </ul>
@@ -97,7 +118,7 @@ const Blog = styled.section`
       li {
         width: 100%;
         min-height: 50px;
-        height: 100%;
+        /* height: 100%; */
         display: flex;
         align-items: center;
         border-radius: 5px;

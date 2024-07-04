@@ -5,12 +5,12 @@ import { Link } from "react-router-dom";
 const Copyright = () => {
   return (
     <div className="copyright">
-      © {new Date().getFullYear()} Pawan Joshi, All Rights Reserved.{" "}
+      © {new Date().getFullYear()} All Rights Reserved.{" "}
       <Link
         to="/update"
         className="transition-all text-[var(--black)] duration-200 ease-in font-extrabold pl-1 hover:text-blue-500"
       >
-        V<span className="text-[10px]  font-bold ">1.2.2</span>
+        V<span className="text-[10px]  font-bold ">2.0.0</span>
       </Link>
     </div>
   );
