@@ -1,7 +1,6 @@
 import { useParams } from "react-router-dom";
 import styled from "styled-components";
-import Copyright from "../../Copyright/Copyright";
-import { MdOutlineReadMore } from "react-icons/md";
+import Copyright from "../../Copyright/Copyright"; 
 import { useEffect, useState } from "react";
 import axios from "axios";
 
@@ -13,8 +12,7 @@ const BlogPost = () => {
       try {
         const response = await axios.get(
           `http://localhost:3000/api/data/${slug}`
-        );
-        // console.log(response.data);
+        ); 
         setArticles(response.data);
       } catch (error) {
         console.error("Error fetching the articles", error);
