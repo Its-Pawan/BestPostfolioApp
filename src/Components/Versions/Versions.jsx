@@ -8,7 +8,7 @@ const Versions = () => {
         <div className="container-box  ">
           <div className="content flex gap-1 p-8">
             <div className="blog-content  ">
-              <ul className="flex flex-col gap-4 flex-col-reverse">
+              <ul className="flex gap-4 flex-col-reverse">
                 <li>
                   <h5>V1.0</h5>
                   <p>
