@@ -11,7 +11,7 @@ import NotFound from "./Components/Notfount/NotFound";
 import Loader from "./Components/Loader/Loader";
 import Versions from "./Components/Versions/Versions";
 import Profile from "./Components/Profile/Profile"; 
-import BlogsPage from "./Components/blog/BlogsPage"
+import BlogsPage from "./Components/Blog/BlogsPage"
 import BlogPost from "./Components/Blog/Blog/BlogPost";
 
 const App = () => {
