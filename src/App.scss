@@ -53,15 +53,15 @@
   }
 }
 .bg-light {
-  background: url("./assets/images/bg-light.jpg");
-  // background: url("./images/bg-light.jpg");
+  // background: url("./assets/images/bg-light.jpg");
+  background: url("./images/bg-light.jpg");
   &::after {
     background-color: rgba(120, 239, 221, 0.148);
   }
 }
 .bg-dark {
-  background: url("./assets/images/bg-dark.jpg");
-  // background: url("./images/bg-dark.jpg");
+  // background: url("./assets/images/bg-dark.jpg");
+  background: url("./images/bg-dark.jpg");
   &::after {
     background-color: rgba(0, 0, 0, 0.148);
   }
