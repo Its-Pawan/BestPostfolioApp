@@ -12,7 +12,7 @@ const BlogsPage = () => {
       try {
         const response = await axios.get("http://localhost:3000/api/data");
         // console.log(response.data[0].image);
-        setArticles(response.data); 
+        setArticles(response.data);
       } catch (error) {
         console.error("Error fetching the articles", error);
       }
@@ -28,16 +28,16 @@ const BlogsPage = () => {
           <div className="inner-container">
             <h2 className="global-heading">Blogs</h2>
             <div className="content">
-              {articles.length !== 0  ? (
+              {articles.length !== 0 ? (
                 <div className="blogs grid gap-6">
                   {articles.map((post, id) => (
                     <BlogsCard
                       key={id}
                       index={post._id}
-                      Image={`data:image/png;base64,${post.image}`}
+                      Image={`data:${post.image.contentType};base64,${post.image.data}`}
                       Title={post.title}
                       Desc={post.description}
-                      PubliseDate={post.publishDate} 
+                      PubliseDate={post.publishDate}
                     />
                   ))}
                 </div>

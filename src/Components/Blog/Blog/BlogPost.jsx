@@ -37,7 +37,7 @@ const BlogPost = () => {
                     <div className="blog-thumbnail relative">
                       <img
                         className="rounded-md md:h-[350px]"
-                        src={`data:image/png;base64,${articles.image}`}
+                        src={`data:${articles.image.contentType};base64,${articles.image.data}`}
                         alt={articles.title}
                       />
                       <p className="publish-date absolute left-3 bottom-3 ">
