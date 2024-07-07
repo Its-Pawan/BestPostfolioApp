@@ -11,7 +11,7 @@ const BlogPost = () => {
     const fetchArticles = async () => {
       try {
         const response = await axios.get(
-          `http://localhost:3000/api/data/${slug}`
+          `https://blog-dby5.onrender.com/api/data/${slug}`
         ); 
         setArticles(response.data);
       } catch (error) {

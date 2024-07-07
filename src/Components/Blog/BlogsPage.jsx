@@ -10,7 +10,7 @@ const BlogsPage = () => {
   useEffect(() => {
     const fetchArticles = async () => {
       try {
-        const response = await axios.get("http://localhost:3000/api/data");
+        const response = await axios.get("https://blog-dby5.onrender.com/api/data");
         // console.log(response.data[0].image);
         setArticles(response.data);
       } catch (error) {
