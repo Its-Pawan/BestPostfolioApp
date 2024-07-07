@@ -29,7 +29,7 @@ const BlogsPage = () => {
             <h2 className="global-heading">Blogs</h2>
             <div className="content">
               {articles.length !== 0 ? (
-                <div className="blogs grid gap-6">
+                <div className="blogs flex flex-col-reverse gap-6">
                   {articles.map((post, id) => (
                     <BlogsCard
                       key={id}
