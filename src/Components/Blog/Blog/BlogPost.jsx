@@ -48,8 +48,8 @@ const BlogPost = () => {
                 </div>
               </div>
             ) : articles.length != 0 ? (
-              <div className="content flex">
-                <div className="left  w-full md:w-[60%]">
+              <div className="content flex justify-center">
+                <div className="left  w-full md:w-[70%] ">
                   <div className="blog-header">
                     <div className="blog-thumbnail relative">
                       <img
@@ -70,11 +70,7 @@ const BlogPost = () => {
                   <div className="blog-content">
                     <p>{articles.content} </p>
                   </div>
-                </div>
-
-                <div className="right hidden md:flex justify-center items-center   w-[30%] ">
-                  <img src="/assets/images/loader.gif" alt="" />
-                </div>
+                </div> 
               </div>
             ) : (
               "Loading..."
@@ -88,11 +84,7 @@ const BlogPost = () => {
 };
 
 export default BlogPost;
-const Blog = styled.div`
-  .right {
-    border-left: 2px solid var(--gray);
-    margin-left: 35px;
-  }
+const Blog = styled.div` 
   .blog-header {
     width: 100%;
     img {
