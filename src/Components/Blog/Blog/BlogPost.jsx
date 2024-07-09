@@ -1,28 +1,30 @@
 import { useParams } from "react-router-dom";
 import styled from "styled-components";
-import Copyright from "../../Copyright/Copyright"; 
+import Copyright from "../../Copyright/Copyright";
 import { useEffect, useState } from "react";
 import axios from "axios";
 
-const BlogPost = () => { 
-  const { slug } = useParams(); 
+const BlogPost = () => {
+  const { slug } = useParams();
   const [articles, setArticles] = useState([]);
+  const [loading, setLoading] = useState(true);
+
   useEffect(() => {
     const fetchArticles = async () => {
       try {
         const response = await axios.get(
           `https://blog-dby5.onrender.com/api/data/${slug}`
-        ); 
+        );
         setArticles(response.data);
       } catch (error) {
         console.error("Error fetching the articles", error);
+      } finally {
+        setLoading(false);
       }
     };
 
     fetchArticles();
   }, []);
-
-   
 
   return (
     <Blog>
@@ -30,7 +32,22 @@ const BlogPost = () => {
         <div className="container-box">
           <div className="inner-container">
             {/* <h2 className="global-heading">Blog Post</h2> */}
-            {articles.length !=0 ? (
+            {loading ? (
+              <div className="loader h-[50vh] grid place-items-center">
+                <div className="spinner">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                </div>
+              </div>
+            ) : articles.length != 0 ? (
               <div className="content flex">
                 <div className="left  w-full md:w-[60%]">
                   <div className="blog-header">
@@ -52,14 +69,15 @@ const BlogPost = () => {
                   <hr className="my-5" />
                   <div className="blog-content">
                     <p>{articles.content} </p>
-                  </div> 
+                  </div>
                 </div>
+
                 <div className="right hidden md:flex justify-center items-center   w-[30%] ">
                   <img src="/assets/images/loader.gif" alt="" />
                 </div>
               </div>
             ) : (
-              "Blog not found"
+              "Loading..."
             )}
           </div>
           <Copyright />

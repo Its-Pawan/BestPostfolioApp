@@ -19,7 +19,7 @@ const App = () => {
 
   const toggleTheme = () => setTheme(!theme);
 
-  const [isLoading, setIsLoading] = useState(true);
+  const [isLoading, setIsLoading] = useState(false);
   useEffect(() => {
     setTimeout(() => {
       setIsLoading(false);
