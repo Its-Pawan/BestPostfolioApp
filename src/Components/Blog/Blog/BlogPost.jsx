@@ -61,7 +61,7 @@ const BlogPost = () => {
                         {new Date(articles.publishDate).toLocaleDateString()}
                       </p>
                     </div>
-                    <h3>{articles.title} </h3>
+                    <h3 className="title">{articles.title} </h3>
                     <p className="text-[var(--gray)]">
                       {articles.description}{" "}
                     </p>
