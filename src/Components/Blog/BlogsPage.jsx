@@ -56,6 +56,3 @@ const BlogsPage = () => {
 
 export default BlogsPage;
 
-const Blogs = styled.div`
-  color: red;
-`;

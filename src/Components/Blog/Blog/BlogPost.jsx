@@ -106,6 +106,7 @@ const Blog = styled.div`
   .blog-content {
     p {
       color: var(--gray);
+      white-space: pre-wrap;
     }
   }
   .read-more a {
