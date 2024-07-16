@@ -53,7 +53,7 @@ const BlogsPage = () => {
                     {articles.map((post, id) => (
                       <BlogsCard
                         key={id}
-                        index={post._id}
+                        url={post.url}
                         Image={`data:${post.image.contentType};base64,${post.image.data}`}
                         Title={post.title}
                         Desc={post.description}

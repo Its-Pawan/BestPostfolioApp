@@ -77,9 +77,9 @@ const Versions = () => {
                         for enhanced dynamic content capabilities.
                       </li>
                       <li>
-                        <b>Dynamic Blog Integration: </b> Introduced dynamic blog
-                        functionality, allowing seamless creation, editing, and
-                        deletion of blog posts.
+                        <b>Dynamic Blog Integration: </b> Introduced dynamic
+                        blog functionality, allowing seamless creation, editing,
+                        and deletion of blog posts.
                       </li>
                       <li>
                         <b>Improved UI/UX: </b> Enhanced user interface with
@@ -93,6 +93,10 @@ const Versions = () => {
                       </li>
                     </ul>
                   </p>
+                </li>
+                <li>
+                  <h5>V2.0.1</h5>
+                  <p>Fix blog post unshorted url issue</p>
                 </li>
               </ul>
             </div>

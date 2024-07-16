@@ -5,7 +5,7 @@ import { MdOutlineTouchApp } from "react-icons/md";
 
 import { Link } from "react-router-dom"; 
 
-const BlogsCard = ({ Image, Title, Desc, PubliseDate,index }) => {
+const BlogsCard = ({ Image, Title, Desc, PubliseDate,url }) => {
 
 
   
@@ -18,13 +18,13 @@ const BlogsCard = ({ Image, Title, Desc, PubliseDate,index }) => {
         <div className="thumbnail-content flex flex-col justify-between">
           <div>
             <h3 className="title">
-              <Link  to={`/blogs/${Title}`}> {Title}</Link>
+              <Link  to={`/blogs/${url}`}> {Title}</Link>
             </h3>
             <h5 className="publise-date mb-5">{new Date(PubliseDate).toLocaleDateString()}</h5>
             <p className="desc md:pr-6">{Desc}</p>
           </div>
           <div>
-            <Link className="inline-block"  to={`/blogs/${Title}`}>
+            <Link className="inline-block"  to={`/blogs/${url}`}>
               <GlobelButton
                 text="Read More"
                 icon={<MdOutlineTouchApp size={24} type="button" />}
