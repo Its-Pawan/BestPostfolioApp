@@ -73,7 +73,7 @@ const BlogPost = () => {
                 </div> 
               </div>
             ) : (
-              "Loading..."
+              "Oops, something went wrong!"
             )}
           </div>
           <Copyright />
