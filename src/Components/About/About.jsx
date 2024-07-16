@@ -20,7 +20,7 @@ const About = () => {
                 <div className="flex flex-col mt-8  lg:flex-row md:gap-8 ">
                   <div className="left  ">
                     <img
-                      src="./assets/images/person2.jpg"
+                      src="./assets/images/person2.webp"
                       alt="parson2"
                     />
                   </div>

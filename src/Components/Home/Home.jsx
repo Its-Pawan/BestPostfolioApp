@@ -19,7 +19,7 @@ const Home = () => {
           <div className="parson  flex flex-col justify-center items-center gap-4">
             <img
               className="rounded-full   "
-              src="./assets/images/person.jpg"
+              src="./assets/images/person.webp"
               alt="parson"
             />
             <h3>Pawan Joshi</h3>
